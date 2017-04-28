@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- App Specific Styles -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="light-primary-color">
+    <div id="dc-action-bar" class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper fixed-action-btn toolbar active">
+          <ul>
+            <li id="copy-btn" class="waves-effect waves-light"><a href="#!">Copy<i class="material-icons">launch</i></a></li>
+            <li id="clear-btn" class="waves-effect waves-light"><a href="#!"><i class="material-icons">delete</i></a></li>
+            <li id="parse-btn" class="waves-effect waves-light"><a href="#!"><i class="material-icons">search</i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="input-textbox" placeholder="Enter your text to parse for domain names..." class="materialize-textarea">
+            +/-,Domain,"Previous Email","Current Email","Report Date"
+271713,61981,+,agawammageneralcontractor.com,no-email,domainreg@yodle.com,2017-03-26
+271714,61981,+,akgeneralroofing.net,no-email,domainreg@yodle.com,2017-03-26
+271715,61981,+,albuquerqueprivateeye.com,no-email,domainreg@yodle.com,2017-03-26
+271716,61981,+,allphaseroofingservices.net,no-email,domainreg@yodle.com,2017-03-26
+271717,61981,+,almondvalleychiropractor.com,no-email,domainreg@yodle.com,2017-03-26
+271924,61981,-,alpharettahomeinspector.com,domainreg@yodle.com,office@ihihomeinspections.com,2017-03-26
+271718,61981,+,anaheimhvacservice.com,domainreg@yodle.com,domainreg@yodle.com,2017-03-26
+271719,61981,+,andyheatonandassociates.com,no-email,domainreg@yodle.com,2017-03-26
+271720,61981,+,annarbormihvacinstallation.com,no-email,domainreg@yodle.com,2017-03-26
+271721,61981,+,apollobeachhvacservice.com,no-email,domainreg@yodle.com,2017-03-26
+271722,61981,+,arletahvacservice.com,no-email,domainreg@yodle.com,2017-03-26
+271723,61981,+,ashevillenclandscapingservices.com,no-email,domainreg@yodle.com,2017-03-26
+271724,61981,+,aspencolawyer.com,no-email,domainreg@yodle.com,2017-03-26
+271725,61981,+,assistedlivinghomewarwickri.com,no-email,domainreg@yodle.com,2017-03-26
+271726,61981,+,atlantainmovers.com,no-email,domainreg@yodle.com,2017-03-26
+271727,61981,+,atlcmoving.net,csadmin@vistaprint.com,domainreg@yodle.com,2017-03-26
+271728,61981,+,atmospherelandscaping.biz,no-email,domainreg@yodle.com,2017-03-26
+271729,61981,+,auroracoelectricalservices.com,no-email,domainreg@yodle.com,2017-03-26
+271730,61981,+,austinroofbuilder.com,domainreg@yodle.com,domainreg@yodle.com,2017-03-26
+271925,61981,-,azusaplumbingcontractor.com,domainreg@yodle.com,twright1106@gmail.com,2017-03-26
+271731,61981,+,bathremodelingmechanicsville.com,no-email,domainreg@yodle.com,2017-03-26
+271732,61981,+,bellmorecleaningservice.com,no-email,domainreg@yodle.com,2017-03-26
+271733,61981,+,bendhvacservice.com,domainreg@yodle.com,domainreg@yodle.com,2017-03-26
+271734,61981,+,berrirealestatefinder.com,no-email,domainreg@yodle.com,2017-03-26
+271735,61981,+,berthoudcogeneralcontractor.com,no-email,domainreg@yodle.com,2017-03-26
+271736,61981,+,bismarckndlandscapingservice.com,no-email,domainreg@yodle.com,2017-03-26
+271737,61981,+,blackdiamondwaelectrician.com,no-email,domainreg@yodle.com,2017-03-26
+271738,61981,+,blackwoodhvacservice.com,no-email,domainreg@yodle.com,2017-03-26
+271739,61981,+,blainemngeneralcontractor.com,no-email,domainreg@yodle.com,2017-03-26
+271740,61981,+,blainemnroofingcontractor.com,no-email,domainreg@yodle.com,2017-03-26
+271741,61981,+,bonairemedicalweightlosscenter.com,no-email,domainreg@yodle.com,2017-03-26
+271742,61981,+,bradentonflcustomclosetbuilder.com,no-email,domainreg@yodle.com,2017-03-26
+271743,61981,+,brandoncommercialcleaners.com,no-email,domainreg@yodle.com,2017-03-26
+271744,61981,+,briarwoodpropertymanager.com,no-email,domainreg@yodle.com,2017-03-26
+271745,61981,+,brocktoncommercialcleaners.com,no-email,domainreg@yodle.com,2017-03-26
+271746,61981,+,bronxhomepainting.com,no-email,domainreg@yodle.com,2017-03-26
+271747,61981,+,buffalocleaningcontractor.com,no-email,domainreg@yodle.com,2017-03-26
+271748,61981,+,bufordgadentistry.com,no-email,domainreg@yodle.com,2017-03-26
+271749,61981,+,burlingamecalawfirm.com,no-email,domainreg@yodle.com,2017-03-26
+271750,61981,+,caledonianyelectrician.com,no-email,domainreg@yodle.com,2017-03-26
+271751,61981,+,capegirardeaumolawoffice.com,no-email,domainreg@yodle.com,2017-03-26
+271752,61981,+,capstonebros.biz,no-email,domainreg@yodle.com,2017-03-26
+271753,61981,+,carpetcleaningservicesandiegoca.com,whois@carpetcleaningservicesandiegoca.com,domainreg@yodle.com,2017-03-26
+271754,61981,+,carrieonconstruction.net,no-email,domainreg@yodle.com,2017-03-26
+271755,61981,+,chantillycustomcabinetry.com,no-email,domainreg@yodle.com,2017-03-26
+271756,61981,+,chicagoilcleaningservice.com,,domainreg@yodle.com,2017-03-26
+271757,61981,+,cinnaminsonnjpaintingservices.com,no-email,domainreg@yodle.com,2017-03-26
+271758,61981,+,cityappliancetx.net,no-email,domainreg@yodle.com,2017-03-26
+271759,61981,+,cleburnegeneralcontractor.com,no-email,domainreg@yodle.com,2017-03-26
+271760,61981,+,clevelandpestsexterminator.com,no-email,domainreg@yodle.com,2017-03-26
+271926,61981,-,cocoabeachrealestateagent.com,domainreg@yodle.com,info@mydomainholdings.com,2017-03-26
+271761,61981,+,coloradospringscoflooring.com,no-email,domainreg@yodle.com,2017-03-26
+271762,61981,+,columbiafallsmtarborist.com,no-email,domainreg@yodle.com,2017-03-26
+271763,61981,+,columbusprofessionalpainter.com,no-email,domainreg@yodle.com,2017-03-26
+271764,61981,+,columbuspropertydamagerepair.com,no-email,domainreg@yodle.com,2017-03-26
+271765,61981,+,communicationservicescorinthms.com,no-email,domainreg@yodle.com,2017-03-26
+271766,61981,+,conroeautoglassrepairs.com,no-email,domainreg@yodle.com,2017-03-26
+271767,61981,+,contractorminneapolis.com,sales@flexmediadomains.com,domainreg@yodle.com,2017-03-26
+271768,61981,+,coronainteriordesign.com,no-email,domainreg@yodle.com,2017-03-26
+271769,61981,+,coronalocalhaulingcompany.com,no-email,domainreg@yodle.com,2017-03-26
+271770,61981,+,cowsofbuffalo.com,no-email,domainreg@yodle.com,2017-03-26
+271771,61981,+,customclosetsauburn.com,no-email,domainreg@yodle.com,2017-03-26
+271772,61981,+,customclosetsaurora.com,no-email,domainreg@yodle.com,2017-03-26
+271927,61981,-,dallastrucks.org,domainreg@yodle.com,njkang00@gmail.com,2017-03-26
+271773,61981,+,daltonheatingandair.biz,no-email,domainreg@yodle.com,2017-03-26
+271774,61981,+,dalycityhomeremodelers.com,no-email,domainreg@yodle.com,2017-03-26
+271775,61981,+,darylsellssanantonio.com,no-email,domainreg@yodle.com,2017-03-26
+271776,61981,+,daytonohlandscaper.com,no-email,domainreg@yodle.com,2017-03-26
+271777,61981,+,deervalleyhomehealth.net,no-email,domainreg@yodle.com,2017-03-26
+271778,61981,+,defuniakspringshouseinspector.com,no-email,domainreg@yodle.com,2017-03-26
+271779,61981,+,denvercondoshomes.com,no-email,domainreg@yodle.com,2017-03-26
+271780,61981,+,divorcemediationwilliamsville.com,no-email,domainreg@yodle.com,2017-03-26
+271781,61981,+,dpllaw.net,no-email,domainreg@yodle.com,2017-03-26
+271782,61981,+,draperutlandscapingservices.com,no-email,domainreg@yodle.com,2017-03-26
+271783,61981,+,eastweymouthprintservice.com,no-email,domainreg@yodle.com,2017-03-26
+271784,61981,+,edenprairiepropertymanagement.com,domainreg@yodle.com,domainreg@yodle.com,2017-03-26
+271785,61981,+,electricalcontractorchicagoil.com,no-email,domainreg@yodle.com,2017-03-26
+271786,61981,+,electricalservicesauroraco.com,no-email,domainreg@yodle.com,2017-03-26
+271787,61981,+,elitesmilenyc.net,no-email,domainreg@yodle.com,2017-03-26
+271788,61981,+,ellentonflcustomclosetbuilder.com,no-email,domainreg@yodle.com,2017-03-26
+271789,61981,+,eventplanningmanhattannewyork.com,no-email,domainreg@yodle.com,2017-03-26
+271790,61981,+,flooringcompanygoosecreek.com,no-email,domainreg@yodle.com,2017-03-26
+271791,61981,+,flooringcompanylivingstontexas.com,no-email,domainreg@yodle.com,2017-03-26
+271792,61981,+,fortmeyersplumber.com,chuckgg2002@gmail.com,domainreg@yodle.com,2017-03-26
+271928,61981,-,gardencitycosmeticdentist.com,domainreg@yodle.com,support@mydomain-inc.com,2017-03-26
+271793,61981,+,generalcontractorlitchfield.com,no-email,domainreg@yodle.com,2017-03-26
+271794,61981,+,generalcontractortoledooh.com,no-email,domainreg@yodle.com,2017-03-26
+271795,61981,+,generalcontractorvirginiabeach.com,domainreg@yodle.com,domainreg@yodle.com,2017-03-26
+271796,61981,+,gilbertpestsexterminator.com,no-email,domainreg@yodle.com,2017-03-26
+271797,61981,+,grainvalleycarpetcleaning.com,no-email,domainreg@yodle.com,2017-03-26
+271798,61981,+,grainvalleymocarpetcleaner.com,no-email,domainreg@yodle.com,2017-03-26
+271799,61981,+,greenwoodelectricallights.com,no-email,domainreg@yodle.com,2017-03-26
+271800,61981,+,hackensacknjelectricalservices.com,no-email,domainreg@yodle.com,2017-03-26
+271801,61981,+,hamiltonroofingandpainting.com,no-email,domainreg@yodle.com,2017-03-26
+271802,61981,+,hendersonnvmedicalspa.com,no-email,domainreg@yodle.com,2017-03-26
+271803,61981,+,hendersonvillehaulawayservice.com,no-email,domainreg@yodle.com,2017-03-26
+271804,61981,+,homeremodelingcoronaca.com,no-email,domainreg@yodle.com,2017-03-26
+271805,61981,+,homeremodelingdalycityca.com,no-email,domainreg@yodle.com,2017-03-26
+271806,61981,+,homeremodelingservicelosangeles.com,no-email,domainreg@yodle.com,2017-03-26
+271807,61981,+,houseinspectoryoungstown.com,no-email,domainreg@yodle.com,2017-03-26
+271808,61981,+,hvaccontractorgriffinga.com,no-email,domainreg@yodle.com,2017-03-26
+271809,61981,+,hvacservicepuyallup.com,no-email,domainreg@yodle.com,2017-03-26
+271810,61981,+,hvacservicewolcott.com,no-email,domainreg@yodle.com,2017-03-26
+271811,61981,+,ilanbursteindc.biz,no-email,domainreg@yodle.com,2017-03-26
+271812,61981,+,indiolawservices.com,no-email,domainreg@yodle.com,2017-03-26
+271813,61981,+,islandpondinsulationservice.com,no-email,domainreg@yodle.com,2017-03-26
+271814,61981,+,jerseycitynjhvaccontractor.com,no-email,domainreg@yodle.com,2017-03-26
+271815,61981,+,johnsonvilleroofing.com,no-email,domainreg@yodle.com,2017-03-26
+271816,61981,+,junkremovalservicesaustin.com,no-email,domainreg@yodle.com,2017-03-26
+271817,61981,+,junkremovalservicesbudatx.com,no-email,domainreg@yodle.com,2017-03-26
+271818,61981,+,klamathfallslandscaping.com,no-email,domainreg@yodle.com,2017-03-26
+271819,61981,+,lakeodessaelectric.com,no-email,domainreg@yodle.com,2017-03-26
+271820,61981,+,lampasascontractor.com,no-email,domainreg@yodle.com,2017-03-26
+271821,61981,+,landscapedesignhamilton.com,no-email,domainreg@yodle.com,2017-03-26
+271822,61981,+,landscapeservicelincoln.com,no-email,domainreg@yodle.com,2017-03-26
+271823,61981,+,landscapingalbertville.com,no-email,domainreg@yodle.com,2017-03-26
+271824,61981,+,lansingcateringservices.com,no-email,domainreg@yodle.com,2017-03-26
+271825,61981,+,lasvegaselectricianservice.com,no-email,domainreg@yodle.com,2017-03-26
+271826,61981,+,lawofficelowell.com,office@lexipixel.com,domainreg@yodle.com,2017-03-26
+271827,61981,+,lawofficeocalafl.com,domains@dexknowswebsites.com,domainreg@yodle.com,2017-03-26
+271828,61981,+,lawofficesantaana.com,whois@lawofficesantaana.com,domainreg@yodle.com,2017-03-26
+271829,61981,+,lawrencevillegahvacservices.com,no-email,domainreg@yodle.com,2017-03-26
+271830,61981,+,lawservicelittlerockar.com,no-email,domainreg@yodle.com,2017-03-26
+271831,61981,+,lawserviceocalafl.com,no-email,domainreg@yodle.com,2017-03-26
+271832,61981,+,lawservicessandiegoca.com,no-email,domainreg@yodle.com,2017-03-26
+271833,61981,+,legalfirmworcester.com,no-email,domainreg@yodle.com,2017-03-26
+271834,61981,+,legalservicehouston.com,no-email,domainreg@yodle.com,2017-03-26
+271835,61981,+,legalservicesdesmoinesia.com,no-email,domainreg@yodle.com,2017-03-26
+271836,61981,+,lehilawoffice.com,no-email,domainreg@yodle.com,2017-03-26
+271837,61981,+,linksroofing.net,no-email,domainreg@yodle.com,2017-03-26
+271838,61981,+,livingstoncarpetcleaners.com,no-email,domainreg@yodle.com,2017-03-26
+271839,61981,+,livingstonflooringservice.com,no-email,domainreg@yodle.com,2017-03-26
+271929,61981,-,lynnjanitorialservice.com,domainreg@yodle.com,admin@domainregistriesfoundation.com,2017-03-26
+271840,61981,+,lynnroofingservice.com,no-email,domainreg@yodle.com,2017-03-26
+271841,61981,+,lynnwoodlegalservices.com,no-email,domainreg@yodle.com,2017-03-26
+271842,61981,+,magnoliatxroofingservices.com,no-email,domainreg@yodle.com,2017-03-26
+271930,61981,-,meridianpaintinginc.com,domainreg@yodle.com,meridianpainting@att.net,2017-03-26
+271931,61981,-,mesaplumbing.org,domainreg@yodle.com,twright1106@gmail.com,2017-03-26
+271843,61981,+,midwestrepairandconstruction.biz,no-email,domainreg@yodle.com,2017-03-26
+271844,61981,+,milpitascalandscapingservices.com,no-email,domainreg@yodle.com,2017-03-26
+271845,61981,+,miltonmahomeremodeler.com,no-email,domainreg@yodle.com,2017-03-26
+271846,61981,+,minervaohelectrician.com,no-email,domainreg@yodle.com,2017-03-26
+271847,61981,+,modestoheatingcoolingcontractor.com,no-email,domainreg@yodle.com,2017-03-26
+271848,61981,+,mogadorecommercialcleaners.com,no-email,domainreg@yodle.com,2017-03-26
+271849,61981,+,mountairymdplasticsurgeon.com,no-email,domainreg@yodle.com,2017-03-26
+271850,61981,+,mountmorrisnylawoffice.com,no-email,domainreg@yodle.com,2017-03-26
+271851,61981,+,mrtransmissionsanantoniotx.com,no-email,domainreg@yodle.com,2017-03-26
+271852,61981,+,mshairsalonhi.net,no-email,domainreg@yodle.com,2017-03-26
+271853,61981,+,napacapropertyinspector.com,no-email,domainreg@yodle.com,2017-03-26
+271854,61981,+,newhaveneldercareservice.com,no-email,domainreg@yodle.com,2017-03-26
+271855,61981,+,newhopemnpaintingservices.com,no-email,domainreg@yodle.com,2017-03-26
+271856,61981,+,newportbeachlocaldentist.com,no-email,domainreg@yodle.com,2017-03-26
+271857,61981,+,newtongrovencpaintingservices.com,no-email,domainreg@yodle.com,2017-03-26
+271858,61981,+,norfolkmaappliancerepair.com,no-email,domainreg@yodle.com,2017-03-26
+271859,61981,+,northattleboroughmaplumbing.com,no-email,domainreg@yodle.com,2017-03-26
+271860,61981,+,northportflgeneralcontractor.com,no-email,domainreg@yodle.com,2017-03-26
+271861,61981,+,northshoremedaesthetics.net,no-email,domainreg@yodle.com,2017-03-26
+271862,61981,+,okeechobeeflarborist.com,no-email,domainreg@yodle.com,2017-03-26
+271863,61981,+,orangegeneralcontracting.com,no-email,domainreg@yodle.com,2017-03-26
+271864,61981,+,orlandocommercialroofingcompany.com,no-email,domainreg@yodle.com,2017-03-26
+271865,61981,+,ormondbeachflhandymanservices.com,no-email,domainreg@yodle.com,2017-03-26
+271866,61981,+,oshawalawservices.com,no-email,domainreg@yodle.com,2017-03-26
+271867,61981,+,oxnardcageneralcontractor.com,no-email,domainreg@yodle.com,2017-03-26
+271868,61981,+,ozarkcabinetry.com,gdoyle1014@yahoo.com,domainreg@yodle.com,2017-03-26
+271869,61981,+,padgettarvadaco.com,no-email,domainreg@yodle.com,2017-03-26
+271870,61981,+,padgettfoxvalley.com,no-email,domainreg@yodle.com,2017-03-26
+271871,61981,+,paintingcontractorbostonma.com,no-email,domainreg@yodle.com,2017-03-26
+271872,61981,+,paintingcontractorcorona.com,no-email,domainreg@yodle.com,2017-03-26
+271873,61981,+,paloaltohomeremodelers.com,lannyd@kw.com,domainreg@yodle.com,2017-03-26
+271874,61981,+,paramountcaflooringcontractor.com,no-email,domainreg@yodle.com,2017-03-26
+271875,61981,+,parkercopavingcontractor.com,no-email,domainreg@yodle.com,2017-03-26
+271876,61981,+,parkfallsbuilders.net,no-email,domainreg@yodle.com,2017-03-26
+271877,61981,+,peoriaillegalservice.com,no-email,domainreg@yodle.com,2017-03-26
+271878,61981,+,perryokhvaccontractor.com,no-email,domainreg@yodle.com,2017-03-26
+271879,61981,+,philadelphiaparoofrestoration.com,no-email,domainreg@yodle.com,2017-03-26
+271880,61981,+,pittsburgcaelectrician.com,no-email,domainreg@yodle.com,2017-03-26
+271881,61981,+,pittsburghpaplumbingservices.com,no-email,domainreg@yodle.com,2017-03-26
+271882,61981,+,plumbingservicesriversideca.com,no-email,domainreg@yodle.com,2017-03-26
+271883,61981,+,poolservicesstatesville.com,no-email,domainreg@yodle.com,2017-03-26
+271884,61981,+,printingservicevancouver.com,no-email,domainreg@yodle.com,2017-03-26
+271885,61981,+,propertyinspectorcartersville.com,no-email,domainreg@yodle.com,2017-03-26
+271886,61981,+,puyalluphvacservice.com,domainreg@yodle.com,domainreg@yodle.com,2017-03-26
+271887,61981,+,raleighfencingcontractors.com,raleighfencingcontractors.com@domainsbyproxy.com,domainreg@yodle.com,2017-03-26
+271888,61981,+,rapidcitysdplumbingcontractor.com,no-email,domainreg@yodle.com,2017-03-26
+271889,61981,+,rebath-locations.com,no-email,domainreg@yodle.com,2017-03-26
+271890,61981,+,reddingcapaintingservice.com,no-email,domainreg@yodle.com,2017-03-26
+271891,61981,+,remodelingvancouver.biz,no-email,domainreg@yodle.com,2017-03-26
+271892,61981,+,reneesellsmorehomesinmaui.com,no-email,domainreg@yodle.com,2017-03-26
+271893,61981,+,richlandlawnmaintenance.com,no-email,domainreg@yodle.com,2017-03-26
+271894,61981,+,richlandlawnservices.com,no-email,domainreg@yodle.com,2017-03-26
+271895,61981,+,ridoutsheatingandcooling.com,no-email,domainreg@yodle.com,2017-03-26
+271896,61981,+,rivertonutlandscapingservices.com,no-email,domainreg@yodle.com,2017-03-26
+271897,61981,+,roofingcompanyhilliard.com,no-email,domainreg@yodle.com,2017-03-26
+271898,61981,+,sacramentolegalservice.com,rbhanot1@gmail.com,domainreg@yodle.com,2017-03-26
+271899,61981,+,sandpointcabinetry.com,no-email,domainreg@yodle.com,2017-03-26
+271900,61981,+,sanfranciscocommercialcleaners.com,no-email,domainreg@yodle.com,2017-03-26
+271901,61981,+,scaliaslandscape.net,no-email,domainreg@yodle.com,2017-03-26
+271902,61981,+,schenectadycommercialpainter.com,no-email,domainreg@yodle.com,2017-03-26
+271903,61981,+,seattlewaconcreteservices.com,no-email,domainreg@yodle.com,2017-03-26
+271904,61981,+,shirriffconstruction.net,no-email,domainreg@yodle.com,2017-03-26
+271905,61981,+,smilerockers.biz,no-email,domainreg@yodle.com,2017-03-26
+271906,61981,+,spartanburgsclawservices.com,no-email,domainreg@yodle.com,2017-03-26
+271907,61981,+,stpaulhvacservice.com,domainreg@yodle.com,domainreg@yodle.com,2017-03-26
+271908,61981,+,sunmaninhomesysteminstaller.com,no-email,domainreg@yodle.com,2017-03-26
+271909,61981,+,takasegaragedoors.net,no-email,domainreg@yodle.com,2017-03-26
+271910,61981,+,towingservicebuffalo.com,sysadmin@localedge.com,domainreg@yodle.com,2017-03-26
+271911,61981,+,townsidesaden.net,no-email,domainreg@yodle.com,2017-03-26
+271912,61981,+,townsidesedan.net,no-email,domainreg@yodle.com,2017-03-26
+271913,61981,+,virginiabeachelectricianservice.com,no-email,domainreg@yodle.com,2017-03-26
+271914,61981,+,walworthwiplumbingservices.com,no-email,domainreg@yodle.com,2017-03-26
+271915,61981,+,waxahachietxroofingservices.com,no-email,domainreg@yodle.com,2017-03-26
+271916,61981,+,westmifflinselfdefense.com,no-email,domainreg@yodle.com,2017-03-26
+271917,61981,+,westrichlandlawnservices.com,no-email,domainreg@yodle.com,2017-03-26
+271918,61981,+,wheatridgehomeremodeling.com,no-email,domainreg@yodle.com,2017-03-26
+271919,61981,+,whitehouseohroofingservices.com,no-email,domainreg@yodle.com,2017-03-26
+271920,61981,+,wichitageneralcontracting.com,no-email,domainreg@yodle.com,2017-03-26
+271921,61981,+,wildgeesegardensmt.com,no-email,domainreg@yodle.com,2017-03-26
+271932,61981,-,woodstockhomeinspector.com,domainreg@yodle.com,office@ihihomeinspections.com,2017-03-26
+271922,61981,+,youngstownhouseinspector.com,no-email,domainreg@yodle.com,2017-03-26
+271923,61981,+,youngstownlawoffice.com,no-email,domainreg@yodle.com,2017-03-26
+          </textarea>
+        </div>
+      </div>
+    </div>
+
+    <div id="results-modal" class="modal bottom-sheet">
+      <div class="modal-content">
+        <div class="" id="results-text-container"></div>
+        <div class="spacing"></div>
+        <div class="center-align addthis_inline_share_toolbox_316y"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" id="launch-go-daddy-btn"><i class="material-icons left">launch</i>Launch GoDaddy</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
+
+    <!--Import jQuery before materialize.js-->
+    <script id="results-text-template" type="text/html">
+      <h4>Found <strong>{{totalDomainsCount}}</strong> unique domain names</h4>
+      <p>TLD Breakdown: {{tldResults}}</p>
+      <p>Duplicates: {{duplicateResults}}</p>
+      <p>The results have been copied to your clipboard. Launch the GoDaddy Bulk Search tool below to check availability. Don't forget to share this with your friends!</p>
+    </script>
+
+    <script id="tld-result-template" type="text/html">
+      <div class="chip">
+        {{tld}}<span class="badge">{{tldCount}}</span>
+      </div>
+    </script>
+
+    <script id="duplicate-result-template" type="text/html">
+      <div class="chip">
+        {{duplicate}}<span class="badge">{{duplicateCount}}</span>
+      </div>
+    </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rsvp/3.5.0/rsvp.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59037fcb735abfb9"></script>
+    <script type="text/javascript" src="js/domain-cleaner.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
