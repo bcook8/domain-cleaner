@@ -108,13 +108,16 @@ var DomainCleaner = (function() {
 
   var parse = function(text){
 		var domainNameRegEx = new RegExp(_DOMAIN_NAME_REG_EXP_PATTERN, 'g'),
+				tldRegex = new RegExp(_tldRegExpPattern, 'g'),
 			  strMatches = [],
 				currExecResult;
 
 		text = text.toLowerCase();
 
 		while ((currExecResult = domainNameRegEx.exec(text)) !== null){
-			strMatches.push(currExecResult[0]);
+			if(tldRegex.exec(text) !== null){
+				strMatches.push(currExecResult[0]);
+			}
 		}
 
 		return new Statistics(strMatches);
