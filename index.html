@@ -10,37 +10,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- App Specific Styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
+
+    <title>Domain Cleaner - Extract domains from raw text</title>
   </head>
   <body class="light-primary-color">
-    <div id="dc-action-bar" class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper fixed-action-btn toolbar active">
-          <ul>
-            <li id="copy-btn" class="waves-effect waves-light"><a href="#!">Copy<i class="material-icons">launch</i></a></li>
-            <li id="clear-btn" class="waves-effect waves-light"><a href="#!"><i class="material-icons">delete</i></a></li>
-            <li id="parse-btn" class="waves-effect waves-light"><a href="#!"><i class="material-icons">search</i></a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+    <nav id="top-nav">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Logo</a>
+      </div>
+    </nav>
+
     <div class="container">
       <div class="row">
         <div class="input-field col s12">
+          <nav id="textarea-action-bar">
+            <div class="nav-wrapper">
+              <ul class="left">
+                <li><a href="#!" id="copy-btn">Copy Domains</a></li>
+              </ul>
+              <ul class="right">
+                <li><a href="#!" id="clear-btn">Clear Text</a></li>
+              </ul>
+            </div>
+          </nav>
           <textarea id="input-textbox" placeholder="Enter your text to parse for domain names..." class="materialize-textarea"></textarea>
-        </div>
-      </div>
-    </div>
+          <p id="ad1">$12.00 / Year Hosting &amp; Free.com</p>
+          <p id="ad2">$8.99 .com's</p>
+          <a id="parse-btn" class="btn waves-effect waves-light red lighten-2" href="#!">Submit</a>
 
-    <div id="results-modal" class="modal bottom-sheet">
-      <div class="modal-content">
-        <div class="" id="results-text-container"></div>
-        <div class="spacing"></div>
-        <div class="center-align addthis_inline_share_toolbox_316y"></div>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" id="launch-go-daddy-btn"><i class="material-icons left">launch</i>Launch GoDaddy</a>
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+          <div id="results-area">
+              <div class="" id="results-text-container"></div>
+              <div class="spacing"></div>
+          </div>
+
+          <div class="center-align addthis_inline_share_toolbox_316y"></div>
+        </div>
       </div>
     </div>
 
@@ -49,7 +54,7 @@
       <h4>Found <strong>{{totalDomainsCount}}</strong> unique domain names</h4>
       <p>TLD Breakdown: {{tldResults}}</p>
       <p>Duplicates: {{duplicateResults}}</p>
-      <p>The results have been copied to your clipboard. Launch the GoDaddy Bulk Search tool below to check availability. Don't forget to share this with your friends!</p>
+      <p>The results have been copied to your clipboard.</p>
     </script>
 
     <script id="tld-result-template" type="text/html">

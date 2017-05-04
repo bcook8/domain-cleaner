@@ -9,20 +9,7 @@ $(function(){
         $launchGoDaddyBtn = $("#launch-go-daddy-btn"),
         $inputTextbox = $("#input-textbox"),
         $resultsTextContainer = $("#results-text-container"),
-        $resultsModal = $("#results-modal").modal({
-            dismissible: true, // Modal can be dismissed by clicking outside of the modal
-            opacity: .5, // Opacity of modal background
-            inDuration: 300, // Transition in duration
-            outDuration: 200, // Transition out duration
-            startingTop: '4%', // Starting top style attribute
-            endingTop: '10%', // Ending top style attribute
-            ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
-              console.log(modal, trigger);
-            },
-            complete: function() {
-            } // Callback for Modal close
-          }
-        ),
+        $resultsArea = $("#results-area").hide(),
         results,
         parser;
 
@@ -94,13 +81,6 @@ $(function(){
 
     });
 
-    $launchGoDaddyBtn.click(function(ev){
-      window.open(
-        "https://www.godaddy.com/domains/bulk-domain-search.aspx",
-        '_blank',
-        'location=yes,height=470,width=720,scrollbars=yes,status=yes');
-    })
-
     $clearBtn.click(function(ev){
       $inputTextbox.val('');
     });
@@ -109,14 +89,17 @@ $(function(){
       var text = $inputTextbox.val();
 
       if (text === '') return;
-
+      $resultsArea.show();
       results = parser.parse($inputTextbox.val());
 
       // TODO: Handle empty results;
 
       $inputTextbox.val(results.getUniqueDomains().join('\n'));
       renderResults(results);
-      $resultsModal.modal('open');
+      window.open(
+        "https://www.godaddy.com/domains/bulk-domain-search.aspx",
+        '_blank',
+        'location=yes,height=470,width=720,scrollbars=yes,status=yes');
     });
 
   });

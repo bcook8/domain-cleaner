@@ -19,6 +19,9 @@
 
 }
 
+#top-nav .brand-logo {
+  left: 15px !important;
+}
 
 #dc-action-bar .toolbar  {
   top: 0;
@@ -26,30 +29,81 @@
   height: 100%;
 }
 
+#textarea-action-bar {
+  width: 100%;
+  max-width: 632px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #input-textbox {
-  border: none;
   border-image: none;
   border-image-width: 0;
+  border-image-width: 0;
+  background: white;
+  padding: 15px;
+  border: solid 1px #d8d7d7;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: auto;
+  min-height: 300px;
 }
 
 #input-textbox:focus {
-  border: none !important;
-  border: none;
   border-image: none;
   border-image-width: 0;
 }
 
-#results-modal {
-  max-height: 100%;
+#ad1, #ad2, #parse-btn {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
-#results-modal .chip .badge {
+#ad1, #ad2 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 0.5;
+}
+
+#ad1 {
+
+}
+
+#ad2 {
+
+}
+
+#parse-btn{
+  width: 116px;
+  display: block;
+}
+
+#results-area {
+  max-height: 100%;
+  max-width: 624px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#results-area .chip .badge {
   margin: 0 !important;
   margin-top: 4px !important;
   padding: 0 !important;
   font-weight: bold !important;
 }
 
-#results-modal .spacing {
+#results-area .spacing {
   height: 30px;
+}
+
+
+.center-align.addthis_inline_share_toolbox_316y
+{
+  clear: both;
+  margin-top: 23px;
 }
