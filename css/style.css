@@ -21,6 +21,7 @@
 
 #top-nav .brand-logo {
   left: 15px !important;
+  padding-top: 5px;
 }
 
 #dc-action-bar .toolbar  {
