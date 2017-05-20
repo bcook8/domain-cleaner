@@ -4,7 +4,7 @@ var DomainCleaner = (function() {
 			_URL_TLDS_ALPHA_BY_DOMAIN = "./tlds-alpha-by-domain.txt";
 
   var _validTLDs = [],
-			_tldRegExpPattern = "\\b\\.(%s)(\\.($s))?(\\.(%s))?\\b";
+			_validTLDsHash = {};
 
 	// Sub class that provides all the statistics on a list of domain names
 	var Statistics = function(domainsFound) {
@@ -15,20 +15,18 @@ var DomainCleaner = (function() {
 
 	Statistics.prototype = function() {
 	  var getDomainTLDHashCounts = function(){
-			var result, tldRegex;
+			var result;
+
 			if(this._domainTLDHashCounts) return this._domainTLDHashCounts;
 
 			result = {};
-			tldRegex = new RegExp(_tldRegExpPattern, 'g');
 
 			this._domainNamesFoundRaw.forEach(function(name, i){
-				var tldResult = tldRegex.exec(name),
-						tldKey,
-						tldCountVal;
+				var tldResult = _getTLDFromDomain(name), k, v;
 
 				if(tldResult){
 					console.log(tldResult)
-					k = tldResult[0].substring(1);
+					k = tldResult;
 					v = result[k];
 					result[k] = typeof v === "undefined" ? 1 : v + 1;
 				} else {
@@ -106,27 +104,40 @@ var DomainCleaner = (function() {
     });
   };
 
+	var _getTLDFromDomain = function(str){
+		return str.substring(str.lastIndexOf('.') + 1);
+	};
+
+	var _hasValidTLD = function(domain){
+		return !! _validTLDsHash[_getTLDFromDomain(domain)];
+	};
+
   var parse = function(text){
 		var domainNameRegEx = new RegExp(_DOMAIN_NAME_REG_EXP_PATTERN, 'g'),
-				tldRegex = new RegExp(_tldRegExpPattern, 'g'),
-			  strMatches = [],
+				strMatches = [],
 				currExecResult;
 
+		var a = 0;
+		var b = 0;
 		text = text.toLowerCase();
 
 		while ((currExecResult = domainNameRegEx.exec(text)) !== null){
-			if(tldRegex.exec(text) !== null){
+			a++;
+			if(_hasValidTLD(currExecResult[0])){
+				b++
 				strMatches.push(currExecResult[0]);
+			} else {
+				console.log('tld check failed for: ' + currExecResult[0]);
 			}
 		}
 
+		console.log("passed domain check: " + a, "passed tld check: " + b);
 		return new Statistics(strMatches);
   }
 
   // Exposed functionality
   var _export = {
     getValidTLDs: function(){ return _validTLDs; },
-		getValidTLDsPattern: function(){ return _tldRegExpPattern; },
     parse: parse
   };
 
@@ -140,11 +151,10 @@ var DomainCleaner = (function() {
 						.toLowerCase()
 						.split("\n")
 						.filter(function(s){ return s !== ""; });
-					tldPatternLiteralSection = _validTLDs.join('|');
-					_tldRegExpPattern = _tldRegExpPattern
-						.replace('%s', _validTLDs.join('|'))
-						.replace('%s', _validTLDs.join('|'))
-						.replace('%s', _validTLDs.join('|'));
+
+					_validTLDs.forEach(function(tld){
+						_validTLDsHash[tld] = true;
+					});
 
           return _getInstanceAsync();
         }).catch(function(error){
