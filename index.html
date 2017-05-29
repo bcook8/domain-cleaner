@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <!-- App Specific Styles -->
-    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="css/style.css?v=2983472983742347">
 
     <title>Domain Cleaner - Extract domains from raw text</title>
   </head>
@@ -27,7 +27,7 @@
       <div class="row">
         <div class="input-field col s12">
           <nav id="textarea-action-bar">
-            <div class="nav-wrapper">
+            <div class="font-size-14 nav-wrapper">
               <ul class="left">
                 <li><a href="#!" id="copy-btn">Copy Domains</a></li>
               </ul>
@@ -36,9 +36,10 @@
               </ul>
             </div>
           </nav>
-          <textarea id="input-textbox" placeholder="Enter your text to parse for domain names..." class="materialize-textarea"></textarea>
-          <p id="ad1">$12.00 / Year Hosting &amp; Free.com</p>
-          <p id="ad2">$8.99 .com's</p>
+          <textarea id="input-textbox" placeholder="Enter your text to parse for domain names..." class="font-size-14 materialize-textarea"></textarea>
+          <p id="ad1"><a href="#" target="_blank">Ad 1</a></p>
+          <p id="ad2"><a href="http://www.anrdoezrs.net/click-7568875-10730504-1467905687000" target="_blank">$8.99 .com's</a></p>
+          <p id="ad3"><a href="#" target="_blank">Ad 3</a></p>
           <a id="parse-btn" class="btn waves-effect waves-light red lighten-2" href="#!">Submit</a>
 
           <div id="results-area">
@@ -53,20 +54,20 @@
 
     <!--Import jQuery before materialize.js-->
     <script id="results-text-template" type="text/html">
-      <h4>Found <strong>{{totalDomainsCount}}</strong> unique domain names</h4>
-      <p>TLD Breakdown: {{tldResults}}</p>
-      <p>Duplicates: {{duplicateResults}}</p>
-      <p>The results have been copied to your clipboard.</p>
+      <h4 class="font-size-14">Found <strong>{{totalDomainsCount}}</strong> unique domain names</h4>
+      <p class="font-size-14">TLD Breakdown: {{tldResults}}</p>
+      <p class="font-size-14">Duplicates: {{duplicateResults}}</p>
+      <p class="font-size-14">The results have been copied to your clipboard.</p>
     </script>
 
     <script id="tld-result-template" type="text/html">
-      <div class="chip">
+      <div class="chip font-size-14">
         {{tld}}<span class="badge">{{tldCount}}</span>
       </div>
     </script>
 
     <script id="duplicate-result-template" type="text/html">
-      <div class="chip">
+      <div class="chip font-size-14">
         {{duplicate}}<span class="badge">{{duplicateCount}}</span>
       </div>
     </script>
@@ -77,7 +78,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-59037fcb735abfb9"></script>
-    <script type="text/javascript" src="js/domain-cleaner.js?v=<?php echo time(); ?>"></script>
+    <script type="text/javascript" src="js/domain-cleaner.js?v=34985347598347598537"></script>
     <script type="text/javascript" src="js/main.js?v=<?php echo time(); ?>"></script>
   </body>
 </html>

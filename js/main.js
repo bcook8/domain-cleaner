@@ -75,6 +75,7 @@ $(function(){
           .replace('{{tldResults}}', renderTLDResults(results))
           .replace('{{duplicateResults}}', renderDuplicateResults(results))
       );
+
     };
 
     $inputTextbox.change(function(){

@@ -58,16 +58,18 @@
   border-image-width: 0;
 }
 
-#ad1, #ad2, #parse-btn {
+#ad1, #ad2, #ad3, #parse-btn {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
 
-#ad1, #ad2 {
+#ad1, #ad2, #ad3 {
   font-size: 18px;
   font-weight: bold;
   line-height: 0.5;
+  text-decoration: underline;
+  color: #737a7d;
 }
 
 #ad1 {
@@ -75,6 +77,10 @@
 }
 
 #ad2 {
+
+}
+
+#ad3 {
 
 }
 
@@ -102,9 +108,16 @@
   height: 30px;
 }
 
-
 .center-align.addthis_inline_share_toolbox_316y
 {
   clear: both;
   margin-top: 23px;
+}
+
+.font-size-14 {
+  font-size: 14px !important;
+}
+
+.font-size-18 {
+  font-size: 18px !important;
 }

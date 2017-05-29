@@ -21,7 +21,7 @@ var DomainCleaner = (function() {
 
 			result = {};
 
-			this._domainNamesFoundRaw.forEach(function(name, i){
+			this.getUniqueDomains().forEach(function(name, i){
 				var tldResult = _getTLDFromDomain(name), k, v;
 
 				if(tldResult){
