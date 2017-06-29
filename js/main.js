@@ -100,7 +100,9 @@ $(function(){
       window.open(
         "https://www.godaddy.com/domains/bulk-domain-search.aspx",
         '_blank',
-        'location=yes,height=470,width=720,scrollbars=yes,status=yes');
+        'location=yes,height=470,width=720,scrollbars=yes,status=yes,top=%t,left=%l'
+          .replace('%t', $(window).height() - 470)
+          .replace('%l', $(window).width() - 720));
     });
 
   });
